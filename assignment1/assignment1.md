@@ -17,6 +17,8 @@
 
 False. You should have the test dataset and the train dataset. Because the training on the training set will cause overfit, if you do not distinguish between the test set and the training set, the final result will be false high.
 
+
+
 ## 2. Bayes Decision Rule
 
 (a)
@@ -38,4 +40,14 @@ $\displaystyle P(y=1|x)=\frac{e^{-\frac{1}{2}x_{1}^{2}x_{2}^{2}}} { e^{-\frac{1}
 
 Discisoin Boudry: $x_1^{2}*x_2^2=(x_1-1)^2(x_2-1)^2$
 
-np.linalg.det
+(d)
+
+$\phi = P(y=1)$
+
+$\displaystyle \mu_0=\frac{\sum_{y=0} x_{i}}{\sum_{y=0}}$ the average x when y = 0
+
+$\displaystyle \mu_1=\frac{\sum_{y=1} x_{i}}{\sum_{y=1}}$ the average x when y = 1
+
+
+
+## 4. Text Classification with Naive Bayes

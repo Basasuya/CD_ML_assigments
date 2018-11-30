@@ -51,3 +51,10 @@ $\displaystyle \mu_1=\frac{\sum_{y=1} x_{i}}{\sum_{y=1}}$ the average x when y =
 
 
 ## 4. Text Classification with Naive Bayes
+
+(a)
+
+52913, 27709,  2571, 23471, 23631,  8058, 22602, 33609, 35796,60120
+
+
+

@@ -12,8 +12,12 @@ def likelihood(x):
     C, N = x.shape
     l = np.zeros((C, N))
     #TODO
-
+    
     # begin answer
+    all = x.sum(axis = 1)
+    for i in range(C):
+        l[i] = np.log(x[i]) - np.log(all[i])
+    
     # end answer
 
     return l

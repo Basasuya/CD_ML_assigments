@@ -42,13 +42,19 @@ Discisoin Boudry: $x_1^{2}*x_2^2=(x_1-1)^2(x_2-1)^2$
 
 (d)
 
-$\phi = P(y=1)$
+we define n as number of y=0, m as number of y = 1
 
-$\displaystyle \mu_0=\frac{\sum_{y=0} x_{i}}{\sum_{y=0}}$ the average x when y = 0
+$\phi = \frac{m}{m + n}$
 
-$\displaystyle \mu_1=\frac{\sum_{y=1} x_{i}}{\sum_{y=1}}$ the average x when y = 1
+$\displaystyle \mu_0=\frac{\sum_{y=0} x_{i}}{n}$ the average x when y = 0
 
+$\displaystyle \mu_1=\frac{\sum_{y=1} x_{i}}{m}$ the average x when y = 1
 
+$\displaystyle \sum_0=\frac{\sum_{y=0}(xi-\mu_0)(xi-\mu_0)^{T}}{n}$
+
+$\displaystyle \sum_1=\frac{\sum_{y=1}(xi-\mu_1)(xi-\mu_1)^{T}}{m}$
+
+$p(X|y=k) = N(\mu_{k}, \sum_k)$
 
 ## 4. Text Classification with Naive Bayes
 
@@ -56,5 +62,20 @@ $\displaystyle \mu_1=\frac{\sum_{y=1} x_{i}}{\sum_{y=1}}$ the average x when y =
 
 52913, 27709,  2571, 23471, 23631,  8058, 22602, 33609, 35796,60120
 
+(b)
 
+0.9866989117291415
 
+(c)
+
+we define a  classifier which defines all messages as ham messages. If the number of spam messages in all test sets is only 1%, then the final accuracy rate is 99%. In fact, this classifier can't find spam, it has no effect.
+
+(d)
+
+0.9725906277630415 0.9786476868327402
+
+(e)
+
+In spam filter, precision is more important because you should not miss any information that should be a normal mail.
+
+In airport, recall is more important because any bomb or drug neglected by the classifier can cause irreparable consequences

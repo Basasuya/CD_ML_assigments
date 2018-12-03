@@ -64,7 +64,7 @@ $p(X|y=k) = N(\mu_{k}, \sum_k)$
 
 (b)
 
-0.9866989117291415
+0.9857315598548972
 
 (c)
 
@@ -72,7 +72,7 @@ we define a  classifier which defines all messages as ham messages. If the numbe
 
 (d)
 
-0.9725906277630415 0.9786476868327402
+0.9750223015165032 0.9724199288256228
 
 (e)
 

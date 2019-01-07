@@ -6,21 +6,23 @@ def f(w, X, y):
 	H[0, 0] = 0
 	return 1 / 2 * np.dot(w.T, np.dot(H, w)) 
 
-def g(w, X, y):
-    P, N = X.shape
-    b = -np.ones((N))
-    A = -y.reshape((N, 1)) * X.T
-    return b - np.dot(A, w)
-
 # def g(w, X, y):
-# 	print(X, y, w)
-# 	P, N = X.shape
-# 	b = -np.ones((N))
-# 	A = -y.reshape((N, 1)) * X.T
-# 	# tmp1 = np.dot(A, w)
-# 	# tmp = b - tmp1
-# 	# print("hhh",tmp.shape, tmp1.shape, A.shape, w.shape,b.shape)
-# 	return np.reshape(b, (N,1)) - np.dot(A, w)
+#     P, N = X.shape
+#     b = -np.ones((N))
+#     A = -y.reshape((N, 1)) * X.T
+#     print(b.shape,  np.dot(A, w).shape, (b - np.dot(A, w)).shape)
+#     return b - np.dot(A, w)
+
+flag = true;
+def g(w, X, y):
+	print(X, y, w)
+	P, N = X.shape
+	b = -np.ones((N))
+	A = -y.reshape((N, 1)) * X.T
+	tmp1 = np.dot(A, w)
+	tmp = b - tmp1
+	print("hhh",tmp.shape)
+	return tmp
 
 def svm(X, y):
 	'''

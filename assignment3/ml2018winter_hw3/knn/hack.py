@@ -19,6 +19,8 @@ def hack(img_name):
     y_train = data['y_train']
 
     # begin answer
+    x = extract_image.extract_image(img_name)
+    digits = knn.knn(x, x_train, y_train, 1)
     # end answer
 
     return digits

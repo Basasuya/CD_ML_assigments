@@ -22,6 +22,7 @@ def softmax_loss(in_, label):
     max_idx = np.argmax(probs, axis=1)
     
     accuracy = np.sum(max_idx == (label - 1).flatten()) / n
+#     print(max_idx, label)
     sensitivity = np.zeros((n, k))
     sensitivity[idx] = -1
     sensitivity = sensitivity + probs

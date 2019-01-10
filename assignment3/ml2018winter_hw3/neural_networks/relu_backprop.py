@@ -14,6 +14,7 @@ def relu_backprop(in_sensitivity, in_):
     # TODO
 
     # begin answer
+    out_sensitivity = in_sensitivity * (in_ > 0)
     # end answer
     return out_sensitivity
 

@@ -12,5 +12,6 @@ def relu_feedforward(in_):
     # TODO
 
     # begin answer
+    out = np.maximum(0,in_)
     # end answer
     return out

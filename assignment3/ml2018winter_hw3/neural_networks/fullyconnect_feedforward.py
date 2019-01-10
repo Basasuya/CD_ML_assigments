@@ -1,5 +1,5 @@
 import numpy as np
-
+import sys
 def fullyconnect_feedforward(in_, weight, bias):
     '''
     The feedward process of fullyconnect
@@ -14,7 +14,10 @@ def fullyconnect_feedforward(in_, weight, bias):
     # TODO
 
     # begin answer
-    out = 
+    new_in = np.hstack((in_, np.ones((in_.shape[0],1))))
+    new_weight = np.vstack((weight, bias.T))
+    out = np.matmul(new_in, new_weight)
+
     # end answer
 
     return out

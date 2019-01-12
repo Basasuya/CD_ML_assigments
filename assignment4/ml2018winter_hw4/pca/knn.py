@@ -1,6 +1,6 @@
 import numpy as np
 import scipy.stats
-
+from scipy.spatial import distance
 
 def knn(x, x_train, y_train, k):
     '''
@@ -20,6 +20,7 @@ def knn(x, x_train, y_train, k):
     # YOUR CODE HERE
 
     # begin answer
+    dis = distance.cdist(x, x_train, 'euclidean')
+    y , _ = scipy.stats.mode(y_train[np.argsort(dis)[:, :k]], axis = 1)
     # end answer
-
     return y

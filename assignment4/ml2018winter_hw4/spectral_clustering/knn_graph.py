@@ -1,4 +1,6 @@
 import numpy as np
+from scipy.spatial import distance
+import sys
 
 def knn_graph(X, k, threshold):
     '''
@@ -15,4 +17,9 @@ def knn_graph(X, k, threshold):
 
     # YOUR CODE HERE
     # begin answer
+    k = max(X.shape[0], k)
+    dis = distance.cdist(X, X, 'euclidean')
+    dis[np.argsort(dis)[:,k:]] = 0
+    dis[dis > threshold] = 0
+    return dis
     # end answer

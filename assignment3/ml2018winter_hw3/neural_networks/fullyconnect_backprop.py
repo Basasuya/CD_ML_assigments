@@ -24,7 +24,7 @@ def fullyconnect_backprop(in_sensitivity, in_, weight):
 
     # begin answer
     out_sensitivity = np.matmul(in_sensitivity, weight.T)
-    new_in = np.hstack((in_, np.ones((in_.shape[0],1))))
+    new_in = np.hstack((in_, np.ones((in_.shape[0],1))))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
     tmp_weight_grad = np.matmul(new_in.T, in_sensitivity) / in_.shape[0]
     weight_grad = tmp_weight_grad[:weight.shape[0],]
     bias_grad = tmp_weight_grad[weight.shape[0]:,].T
